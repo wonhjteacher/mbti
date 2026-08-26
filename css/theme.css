@@ -1,0 +1,53 @@
+/* ==========================================================
+   MBTI 공부법 연구소 — 다크 모드 토큰 + 테마 토글 버튼
+   모든 페이지에서 base.css 다음에 로드
+   ========================================================== */
+
+/* 다크 모드 (IBM Carbon Gray 100 테마) */
+html[data-theme="dark"] {
+  --bg: #161616;
+  --bg-soft: #262626;
+  --card: #262626;
+  --accent: #78a9ff;
+  --accent-soft: #1f2b41;
+  --text: #f4f4f4;
+  --text-sub: #c6c6c6;
+  --line: #393939;
+}
+
+/* ---------- 테마 토글 (아이콘 유틸리티 버튼 — 일반 버튼과 형태 구분) ---------- */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  border: none;
+  border-left: 1px solid var(--line);
+  color: var(--text);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.theme-toggle:hover {
+  background: var(--bg-soft);
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* 라이트 모드에서는 달(다크로 전환), 다크 모드에서는 해(라이트로 전환) 표시 */
+.theme-toggle .icon-sun {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-toggle .icon-sun {
+  display: block;
+}
+
+html[data-theme="dark"] .theme-toggle .icon-moon {
+  display: none;
+}

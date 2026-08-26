@@ -1,0 +1,125 @@
+/* ==========================================================
+   MBTI 공부법 연구소 — 자가진단 페이지 (IBM Carbon 스타일)
+   test.html에서만 사용
+   ========================================================== */
+
+#quiz {
+  max-width: 780px;
+}
+
+.question {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.question h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.question h3 em {
+  font-style: normal;
+  color: var(--accent);
+  margin-right: 6px;
+}
+
+.question label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 0.92rem;
+  color: var(--text-sub);
+  border: 1px solid transparent;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.question label:hover {
+  background: var(--bg-soft);
+}
+
+.question input[type="radio"] {
+  accent-color: var(--accent);
+  margin-top: 5px;
+}
+
+.question label:has(input:checked) {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--text);
+}
+
+/* ---------- 결과 카드 ---------- */
+#result {
+  display: none;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  padding: 40px 32px;
+  margin-top: 40px;
+  max-width: 780px;
+}
+
+#result.show {
+  display: block;
+}
+
+#result .result-group {
+  font-size: 2.4rem;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+  margin: 4px 0 16px;
+}
+
+#result p {
+  color: var(--text-sub);
+  max-width: 600px;
+  margin-bottom: 12px;
+}
+
+#result .cta-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 28px;
+}
+
+.score-bars {
+  max-width: 420px;
+  margin: 24px 0;
+  display: grid;
+  gap: 10px;
+}
+
+.score-bars .bar-row {
+  display: grid;
+  grid-template-columns: 36px 1fr 32px;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-sub);
+}
+
+.score-bars .track {
+  background: var(--bg-soft);
+  height: 8px;
+  overflow: hidden;
+}
+
+.score-bars .fill {
+  background: var(--accent);
+  height: 100%;
+  transition: width 0.6s ease;
+}
+
+.notice {
+  color: var(--text-sub);
+  font-size: 0.88rem;
+  margin-top: 16px;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>공부 습관 자가진단 — MBTI 공부법 연구소</title>
+  <meta name="description" content="공부 습관 10문항으로 나의 기질 그룹(NT·NF·SJ·SP)을 알아보는 자가진단 테스트.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <script src="js/theme.js"></script>
+  <link rel="stylesheet" href="css/test.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <a class="logo" href="index.html"><strong>MBTI</strong> 공부법 연구소</a>
+    <ul>
+      <li><a href="nt.html">NT 분석형</a></li>
+      <li><a href="nf.html">NF 이상형</a></li>
+      <li><a href="sj.html">SJ 관리형</a></li>
+      <li><a href="sp.html">SP 탐험형</a></li>
+      <li><a class="nav-test active" href="test.html">내 유형 찾기</a></li>
+      <li><button type="button" class="theme-toggle" id="themeToggle" aria-label="다크/라이트 모드 전환" title="다크/라이트 모드 전환">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 13.5A8.5 8.5 0 0 1 10.5 3.5a8.5 8.5 0 1 0 10 10Z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg>
+      </button></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-copy">
+    <span class="badge">공부 습관 10문항</span>
+    <h1>내 <span>공부 유형</span> 자가진단</h1>
+    <p>평소 공부할 때의 모습과 가장 가까운 보기를 골라 주세요. 정답은 없습니다!</p>
+    </div>
+    <div class="hero-art">
+      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="13" y="8" width="38" height="48"/>
+        <circle cx="22" cy="20" r="3"/><line x1="29" y1="20" x2="44" y2="20"/>
+        <circle cx="22" cy="32" r="3"/><circle cx="22" cy="32" r="1.2" fill="currentColor" stroke="none"/><line x1="29" y1="32" x2="44" y2="32"/>
+        <circle cx="22" cy="44" r="3"/><line x1="29" y1="44" x2="44" y2="44"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<section>
+  <div class="container">
+    <form id="quiz">
+
+      <div class="question">
+        <h3><em>Q1.</em> 새로운 단원을 공부할 때 나는?</h3>
+        <label><input type="radio" name="q1" value="nt"> 이 개념이 왜 이렇게 되는지 원리부터 따져 본다</label>
+        <label><input type="radio" name="q1" value="nf"> 이걸 배우면 나에게 어떤 의미가 있을지 생각해 본다</label>
+        <label><input type="radio" name="q1" value="sj"> 교과서 순서대로 처음부터 차근차근 읽는다</label>
+        <label><input type="radio" name="q1" value="sp"> 일단 문제부터 풀어 보고 모르는 것만 찾아본다</label>
+      </div>
+
+      <div class="question">
+        <h3><em>Q2.</em> 시험 계획을 세울 때 나는?</h3>
+        <label><input type="radio" name="q2" value="sj"> 날짜별로 과목과 분량을 정한 계획표를 만든다</label>
+        <label><input type="radio" name="q2" value="nt"> 목표 점수에서 역산해 전략적으로 우선순위를 정한다</label>
+        <label><input type="radio" name="q2" value="sp"> 계획보다는 그날그날 컨디션 따라 움직인다</label>
+        <label><input type="radio" name="q2" value="nf"> 이번 시험이 나에게 왜 중요한지 목표부터 적는다</label>
+      </div>
+
+      <div class="question">
+        <h3><em>Q3.</em> 암기가 가장 잘 되는 방법은?</h3>
+        <label><input type="radio" name="q3" value="nt"> 원리와 구조를 이해하면 저절로 외워진다</label>
+        <label><input type="radio" name="q3" value="nf"> 이야기나 감정과 연결하면 오래 기억난다</label>
+        <label><input type="radio" name="q3" value="sj"> 반복해서 쓰고 주기적으로 복습하면 외워진다</label>
+        <label><input type="radio" name="q3" value="sp"> 소리 내어 읽거나 몸을 움직이며 외우면 잘 된다</label>
+      </div>
+
+      <div class="question">
+        <h3><em>Q4.</em> 공부하다 지루해지면 나는?</h3>
+        <label><input type="radio" name="q4" value="sp"> 자리를 옮기거나 다른 활동적인 방법으로 바꾼다</label>
+        <label><input type="radio" name="q4" value="nt"> 더 어려운 심화 문제로 도전 욕구를 자극한다</label>
+        <label><input type="radio" name="q4" value="nf"> 친구와 이야기하거나 좋아하는 과목으로 기분 전환한다</label>
+        <label><input type="radio" name="q4" value="sj"> 지루해도 계획한 분량은 일단 끝낸다</label>
+      </div>
+
+      <div class="question">
+        <h3><em>Q5.</em> 모르는 문제를 만났을 때 나는?</h3>
+        <label><input type="radio" name="q5" value="nt"> 스스로 풀릴 때까지 혼자 오래 고민한다</label>
+        <label><input type="radio" name="q5" value="sj"> 배운 내용과 필기를 처음부터 다시 확인한다</label>
+        <label><input type="radio" name="q5" value="nf"> 선생님이나 친구에게 물어보며 함께 해결한다</label>
+        <label><input type="radio" name="q5" value="sp"> 이것저것 대입해 보며 감으로 접근한다</label>
+      </div>
+
+      <div class="question">
+        <h3><em>Q6.</em> 나의 공부 노트는?</h3>
+        <label><input type="radio" name="q6" value="sj"> 수업 내용이 순서대로 빠짐없이 정리되어 있다</label>
+        <label><input type="radio" name="q6" value="nt"> 핵심 개념 위주로 구조와 연결이 그려져 있다</label>
+        <label><input type="radio" name="q6" value="sp"> 노트보다는 문제집 여백에 바로바로 적는 편이다</label>
+        <label><input type="radio" name="q6" value="nf"> 나만의 그림, 색깔, 감상이 함께 담겨 있다</label>
+      </div>
+
+      <div class="question">
+        <h3><em>Q7.</em> 공부가 가장 잘 되는 순간은?</h3>
+        <label><input type="radio" name="q7" value="nf"> 이 공부가 내 꿈과 연결된다고 느낄 때</label>
+        <label><input type="radio" name="q7" value="sp"> 시험이 코앞이라 발등에 불이 붙었을 때</label>
+        <label><input type="radio" name="q7" value="nt"> 복잡한 개념이 논리적으로 딱 이해됐을 때</label>
+        <label><input type="radio" name="q7" value="sj"> 매일 하던 루틴대로 책상에 앉았을 때</label>
+      </div>
+
+      <div class="question">
+        <h3><em>Q8.</em> 함께 공부하는 것에 대한 나의 생각은?</h3>
+        <label><input type="radio" name="q8" value="nf"> 서로 응원하는 분위기면 훨씬 힘이 난다</label>
+        <label><input type="radio" name="q8" value="nt"> 혼자가 편하다, 스터디는 시간 낭비일 때가 많다</label>
+        <label><input type="radio" name="q8" value="sp"> 친구랑 문제 내기, 대결하면 재미있게 잘 된다</label>
+        <label><input type="radio" name="q8" value="sj"> 정해진 규칙과 진도가 있는 스터디라면 좋다</label>
+      </div>
+
+      <div class="question">
+        <h3><em>Q9.</em> 시험 전날 밤 나의 모습은?</h3>
+        <label><input type="radio" name="q9" value="sj"> 계획대로 이미 끝냈고 정리 노트만 훑어본다</label>
+        <label><input type="radio" name="q9" value="sp"> 지금부터가 진짜 시작, 초집중 벼락치기 모드</label>
+        <label><input type="radio" name="q9" value="nt"> 헷갈리는 개념 몇 개를 뿌리까지 파고 있다</label>
+        <label><input type="radio" name="q9" value="nf"> 잘 볼 수 있을지 마음을 다잡는 시간이 필요하다</label>
+      </div>
+
+      <div class="question">
+        <h3><em>Q10.</em> 성적이 오르지 않을 때 나는?</h3>
+        <label><input type="radio" name="q10" value="nt"> 공부 방법 자체를 분석하고 전략을 다시 짠다</label>
+        <label><input type="radio" name="q10" value="nf"> 속상한 마음을 추스르는 게 먼저다</label>
+        <label><input type="radio" name="q10" value="sj"> 공부 시간을 늘리고 더 성실하게 반복한다</label>
+        <label><input type="radio" name="q10" value="sp"> 일단 기분 전환하고 다음 시험에서 만회한다</label>
+      </div>
+
+      <p class="notice" id="progress">0 / 10 문항 응답</p>
+      <div style="margin-top:16px;">
+        <button type="button" class="btn" id="submitBtn" disabled>결과 보기</button>
+      </div>
+    </form>
+
+    <div id="result">
+      <span class="badge">나의 공부 기질은</span>
+      <div class="result-group" id="resultName"></div>
+      <p id="resultDesc"></p>
+      <div class="score-bars" id="scoreBars"></div>
+      <div class="cta-links">
+        <a class="btn" id="resultLink" href="#">공부법 보러 가기</a>
+        <button type="button" class="btn btn-outline" id="shareBtn">친구에게 공유하기</button>
+      </div>
+      <p class="notice" id="shareNotice"></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>MBTI 공부법 연구소 — 재미로 보는 학습 성향 가이드</p>
+    <p>
+      <a href="index.html">홈</a> · <a href="nt.html">NT</a> ·
+      <a href="nf.html">NF</a> · <a href="sj.html">SJ</a> ·
+      <a href="sp.html">SP</a>
+    </p>
+  </div>
+</footer>
+
+<script src="js/test.js"></script>
+</body>
+</html>
