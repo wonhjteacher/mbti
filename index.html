@@ -1,168 +1,243 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MBTI 공부법 연구소 — 기질별 맞춤 학습 전략</title>
-  <meta name="description" content="MBTI 16유형을 NT·NF·SJ·SP 4가지 기질 그룹으로 나눠 그룹별 학습 성향과 맞춤 공부법, 시험 전략을 정리했습니다. 10문항 자가진단으로 내 공부 유형도 확인해 보세요.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&display=swap">
-  <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/theme.css">
-  <script src="js/theme.js"></script>
-  <link rel="stylesheet" href="css/content.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MBTI 공부법 연구소 — 기질별 맞춤 학습 전략</title>
+    <meta
+      name="google-site-verification"
+      content="eOJiSE7K9SnsmS7Ct7T4hZcma8pOJra8wsFp0JMYiic"
+    />
+    <meta
+      name="naver-site-verification"
+      content="2ed48e0a7c6d0a43f85b5e741f6178d23f420f98"
+    />
+    <meta
+      name="description"
+      content="MBTI 16유형을 NT·NF·SJ·SP 4가지 기질 그룹으로 나눠 그룹별 학습 성향과 맞춤 공부법, 시험 전략을 정리했습니다. 10문항 자가진단으로 내 공부 유형도 확인해 보세요."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300;400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/theme.css" />
+    <script src="js/theme.js"></script>
+    <link rel="stylesheet" href="css/content.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container">
+        <a class="logo" href="index.html"
+          ><strong>MBTI</strong> 공부법 연구소</a
+        >
+        <ul>
+          <li><a href="nt.html">NT 분석형</a></li>
+          <li><a href="nf.html">NF 이상형</a></li>
+          <li><a href="sj.html">SJ 관리형</a></li>
+          <li><a href="sp.html">SP 탐험형</a></li>
+          <li><a class="nav-test" href="test.html">내 유형 찾기</a></li>
+          <li>
+            <button
+              type="button"
+              class="theme-toggle"
+              id="themeToggle"
+              aria-label="다크/라이트 모드 전환"
+              title="다크/라이트 모드 전환"
+            >
+              <svg
+                class="icon-moon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20.5 13.5A8.5 8.5 0 0 1 10.5 3.5a8.5 8.5 0 1 0 10 10Z"
+                />
+              </svg>
+              <svg
+                class="icon-sun"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="4" />
+                <path
+                  d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"
+                />
+              </svg>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-<nav class="nav">
-  <div class="container">
-    <a class="logo" href="index.html"><strong>MBTI</strong> 공부법 연구소</a>
-    <ul>
-      <li><a href="nt.html">NT 분석형</a></li>
-      <li><a href="nf.html">NF 이상형</a></li>
-      <li><a href="sj.html">SJ 관리형</a></li>
-      <li><a href="sp.html">SP 탐험형</a></li>
-      <li><a class="nav-test" href="test.html">내 유형 찾기</a></li>
-      <li><button type="button" class="theme-toggle" id="themeToggle" aria-label="다크/라이트 모드 전환" title="다크/라이트 모드 전환">
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 13.5A8.5 8.5 0 0 1 10.5 3.5a8.5 8.5 0 1 0 10 10Z"/></svg>
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/></svg>
-      </button></li>
-    </ul>
-  </div>
-</nav>
-
-<header class="hero">
-  <div class="container">
-    <div class="hero-copy">
-    <span class="badge">16가지 유형 · 4가지 기질 · 하나의 목표</span>
-    <h1>나에게 맞는 공부법,<br><span>기질</span>에서 답을 찾다</h1>
-    <p>
-      같은 시간을 공부해도 결과가 다른 이유는 머리가 아니라 <strong>방법</strong>에 있습니다.
-      MBTI 기질 그룹별로 검증된 학습 전략을 정리했습니다.
-      나의 기질을 알고, 나에게 맞는 방식으로 공부해 보세요.
-    </p>
-    <a class="btn" href="test.html">내 공부 유형 찾기</a>
-    </div>
-    <div class="hero-art">
-      <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <rect x="8" y="8" width="22" height="22"/><rect x="34" y="8" width="22" height="22"/>
-        <rect x="8" y="34" width="22" height="22"/><rect x="34" y="34" width="22" height="22"/>
-        <circle cx="18" cy="18" r="4.5"/><line x1="21.2" y1="21.2" x2="25" y2="25"/>
-        <path d="M45 15.5c-1.8-2-4.8-1.2-4.8 1.4 0 2.6 4.8 5.6 4.8 5.6s4.8-3 4.8-5.6c0-2.6-3-3.4-4.8-1.4Z"/>
-        <path d="M13.5 45l3.5 3.5 6.5-7"/>
-        <path d="M47 38l-5.5 8.5H46L40.5 55"/>
-      </svg>
-    </div>
-  </div>
-</header>
-
-<main>
-
-<section>
-  <div class="container">
-    <h2>4가지 <span>기질 그룹</span>은 무엇인가요?</h2>
-    <p class="section-lead">MBTI 16가지 유형은 학습 성향 관점에서 NT(분석형)·NF(이상형)·SJ(관리형)·SP(탐험형) 4개 기질 그룹으로 나뉩니다.</p>
-    <div class="card-grid">
-      <article class="card">
-        <h3>NT <span>분석형</span></h3>
-        <p class="keyword">#논리 #원리탐구 #독립학습</p>
-        <p>
-          "왜?"가 해결되어야 외워지는 사람들. 원리와 구조를 파악하면
-          누구보다 깊게 파고들지만, 단순 암기는 지루해합니다.
-        </p>
-        <div class="type-badges">
-          <span>INTJ</span><span>INTP</span><span>ENTJ</span><span>ENTP</span>
+    <header class="hero">
+      <div class="container">
+        <div class="hero-copy">
+          <span class="badge">16가지 유형 · 4가지 기질 · 하나의 목표</span>
+          <h1>나에게 맞는 공부법,<br /><span>기질</span>에서 답을 찾다</h1>
+          <p>
+            같은 시간을 공부해도 결과가 다른 이유는 머리가 아니라
+            <strong>방법</strong>에 있습니다. MBTI 기질 그룹별로 검증된 학습
+            전략을 정리했습니다. 나의 기질을 알고, 나에게 맞는 방식으로 공부해
+            보세요.
+          </p>
+          <a class="btn" href="test.html">내 공부 유형 찾기</a>
         </div>
-        <a class="more" href="nt.html">NT 공부법 자세히 보기 →</a>
-      </article>
-
-      <article class="card">
-        <h3>NF <span>이상형</span></h3>
-        <p class="keyword">#의미부여 #스토리 #함께성장</p>
-        <p>
-          공부에도 '의미'가 필요한 사람들. 왜 배우는지 마음이 움직이면
-          몰입하고, 사람·이야기와 연결될 때 오래 기억합니다.
-        </p>
-        <div class="type-badges">
-          <span>INFJ</span><span>INFP</span><span>ENFJ</span><span>ENFP</span>
+        <div class="hero-art">
+          <svg
+            viewBox="0 0 64 64"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <rect x="8" y="8" width="22" height="22" />
+            <rect x="34" y="8" width="22" height="22" />
+            <rect x="8" y="34" width="22" height="22" />
+            <rect x="34" y="34" width="22" height="22" />
+            <circle cx="18" cy="18" r="4.5" />
+            <line x1="21.2" y1="21.2" x2="25" y2="25" />
+            <path
+              d="M45 15.5c-1.8-2-4.8-1.2-4.8 1.4 0 2.6 4.8 5.6 4.8 5.6s4.8-3 4.8-5.6c0-2.6-3-3.4-4.8-1.4Z"
+            />
+            <path d="M13.5 45l3.5 3.5 6.5-7" />
+            <path d="M47 38l-5.5 8.5H46L40.5 55" />
+          </svg>
         </div>
-        <a class="more" href="nf.html">NF 공부법 자세히 보기 →</a>
-      </article>
+      </div>
+    </header>
 
-      <article class="card">
-        <h3>SJ <span>관리형</span></h3>
-        <p class="keyword">#계획표 #꾸준함 #체계정리</p>
-        <p>
-          계획과 루틴이 무기인 사람들. 정해진 순서대로 차근차근 쌓아 올릴 때
-          가장 강하고, 성실함이 곧 성적이 됩니다.
-        </p>
-        <div class="type-badges">
-          <span>ISTJ</span><span>ISFJ</span><span>ESTJ</span><span>ESFJ</span>
+    <main>
+      <section>
+        <div class="container">
+          <h2>4가지 <span>기질 그룹</span>은 무엇인가요?</h2>
+          <p class="section-lead">
+            MBTI 16가지 유형은 학습 성향 관점에서
+            NT(분석형)·NF(이상형)·SJ(관리형)·SP(탐험형) 4개 기질 그룹으로
+            나뉩니다.
+          </p>
+          <div class="card-grid">
+            <article class="card">
+              <h3>NT <span>분석형</span></h3>
+              <p class="keyword">#논리 #원리탐구 #독립학습</p>
+              <p>
+                "왜?"가 해결되어야 외워지는 사람들. 원리와 구조를 파악하면
+                누구보다 깊게 파고들지만, 단순 암기는 지루해합니다.
+              </p>
+              <div class="type-badges">
+                <span>INTJ</span><span>INTP</span><span>ENTJ</span
+                ><span>ENTP</span>
+              </div>
+              <a class="more" href="nt.html">NT 공부법 자세히 보기 →</a>
+            </article>
+
+            <article class="card">
+              <h3>NF <span>이상형</span></h3>
+              <p class="keyword">#의미부여 #스토리 #함께성장</p>
+              <p>
+                공부에도 '의미'가 필요한 사람들. 왜 배우는지 마음이 움직이면
+                몰입하고, 사람·이야기와 연결될 때 오래 기억합니다.
+              </p>
+              <div class="type-badges">
+                <span>INFJ</span><span>INFP</span><span>ENFJ</span
+                ><span>ENFP</span>
+              </div>
+              <a class="more" href="nf.html">NF 공부법 자세히 보기 →</a>
+            </article>
+
+            <article class="card">
+              <h3>SJ <span>관리형</span></h3>
+              <p class="keyword">#계획표 #꾸준함 #체계정리</p>
+              <p>
+                계획과 루틴이 무기인 사람들. 정해진 순서대로 차근차근 쌓아 올릴
+                때 가장 강하고, 성실함이 곧 성적이 됩니다.
+              </p>
+              <div class="type-badges">
+                <span>ISTJ</span><span>ISFJ</span><span>ESTJ</span
+                ><span>ESFJ</span>
+              </div>
+              <a class="more" href="sj.html">SJ 공부법 자세히 보기 →</a>
+            </article>
+
+            <article class="card">
+              <h3>SP <span>탐험형</span></h3>
+              <p class="keyword">#실전형 #체험학습 #단기집중</p>
+              <p>
+                직접 해봐야 아는 사람들. 손으로 풀고 몸으로 익힐 때 빛나며, 긴
+                이론 설명보다 문제 한 개가 더 좋은 스승입니다.
+              </p>
+              <div class="type-badges">
+                <span>ISTP</span><span>ISFP</span><span>ESTP</span
+                ><span>ESFP</span>
+              </div>
+              <a class="more" href="sp.html">SP 공부법 자세히 보기 →</a>
+            </article>
+          </div>
         </div>
-        <a class="more" href="sj.html">SJ 공부법 자세히 보기 →</a>
-      </article>
+      </section>
 
-      <article class="card">
-        <h3>SP <span>탐험형</span></h3>
-        <p class="keyword">#실전형 #체험학습 #단기집중</p>
-        <p>
-          직접 해봐야 아는 사람들. 손으로 풀고 몸으로 익힐 때 빛나며,
-          긴 이론 설명보다 문제 한 개가 더 좋은 스승입니다.
-        </p>
-        <div class="type-badges">
-          <span>ISTP</span><span>ISFP</span><span>ESTP</span><span>ESFP</span>
+      <section>
+        <div class="container">
+          <h2>왜 <span>기질별 공부법</span>인가요?</h2>
+          <div class="group-intro">
+            <p>
+              같은 기질 그룹은 정보를 받아들이고 정리하는 방식이 비슷해서, 잘
+              맞는 공부 전략도 비슷하기 때문입니다. 열심히 해도 성적이 오르지
+              않는다면, 노력의 양보다 <strong>방식의 궁합</strong>을 의심해 볼
+              때입니다. 어떤 사람은 조용한 방에서 원리를 파고들 때, 어떤 사람은
+              친구에게 설명하며 떠들 때 가장 잘 외웁니다.
+            </p>
+            <p>
+              MBTI 16가지 유형은 학습 성향 관점에서 크게 4개의 기질 그룹으로
+              묶입니다. 직관(N)과 사고(T)가 만난 <strong>NT</strong>, 직관(N)과
+              감정(F)이 만난 <strong>NF</strong>, 감각(S)과 판단(J)이 만난
+              <strong>SJ</strong>, 감각(S)과 인식(P)이 만난
+              <strong>SP</strong>입니다.
+            </p>
+            <p>
+              이 연구소는 그룹별 성향 분석, 유형별 맞춤 공부법, 시험 꿀팁까지 한
+              번에 정리했습니다. 내 유형을 모른다면 아래 자가진단부터 시작해
+              보세요.
+            </p>
+          </div>
         </div>
-        <a class="more" href="sp.html">SP 공부법 자세히 보기 →</a>
-      </article>
-    </div>
-  </div>
-</section>
+      </section>
 
-<section>
-  <div class="container">
-    <h2>왜 <span>기질별 공부법</span>인가요?</h2>
-    <div class="group-intro">
-      <p>
-        같은 기질 그룹은 정보를 받아들이고 정리하는 방식이 비슷해서, 잘 맞는
-        공부 전략도 비슷하기 때문입니다. 열심히 해도 성적이 오르지 않는다면,
-        노력의 양보다 <strong>방식의 궁합</strong>을 의심해 볼 때입니다.
-        어떤 사람은 조용한 방에서 원리를 파고들 때, 어떤 사람은 친구에게
-        설명하며 떠들 때 가장 잘 외웁니다.
-      </p>
-      <p>
-        MBTI 16가지 유형은 학습 성향 관점에서 크게 4개의 기질 그룹으로 묶입니다.
-        직관(N)과 사고(T)가 만난 <strong>NT</strong>, 직관(N)과 감정(F)이 만난 <strong>NF</strong>,
-        감각(S)과 판단(J)이 만난 <strong>SJ</strong>, 감각(S)과 인식(P)이 만난 <strong>SP</strong>입니다.
-      </p>
-      <p>
-        이 연구소는 그룹별 성향 분석, 유형별 맞춤 공부법, 시험 꿀팁까지
-        한 번에 정리했습니다. 내 유형을 모른다면 아래 자가진단부터 시작해 보세요.
-      </p>
-    </div>
-  </div>
-</section>
+      <section>
+        <div class="container">
+          <h2>아직 내 유형을 <span>모른다면?</span></h2>
+          <p class="section-lead">
+            공부 습관 10문항이면 충분합니다. 1분 만에 내 기질 그룹을 확인해
+            보세요.
+          </p>
+          <a class="btn" href="test.html">공부 습관 자가진단 시작하기</a>
+        </div>
+      </section>
+    </main>
 
-<section>
-  <div class="container">
-    <h2>아직 내 유형을 <span>모른다면?</span></h2>
-    <p class="section-lead">공부 습관 10문항이면 충분합니다. 1분 만에 내 기질 그룹을 확인해 보세요.</p>
-    <a class="btn" href="test.html">공부 습관 자가진단 시작하기</a>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <div class="container">
-    <p>MBTI 공부법 연구소 — 재미로 보는 학습 성향 가이드</p>
-    <p>
-      <a href="nt.html">NT</a> · <a href="nf.html">NF</a> ·
-      <a href="sj.html">SJ</a> · <a href="sp.html">SP</a> ·
-      <a href="test.html">자가진단</a>
-    </p>
-  </div>
-</footer>
-
-</body>
+    <footer>
+      <div class="container">
+        <p>MBTI 공부법 연구소 — 재미로 보는 학습 성향 가이드</p>
+        <p>
+          <a href="nt.html">NT</a> · <a href="nf.html">NF</a> ·
+          <a href="sj.html">SJ</a> · <a href="sp.html">SP</a> ·
+          <a href="test.html">자가진단</a>
+        </p>
+      </div>
+    </footer>
+  </body>
 </html>
