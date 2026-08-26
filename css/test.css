@@ -14,13 +14,13 @@
   margin-bottom: 16px;
 }
 
-.question h3 {
+.question h2 {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 14px;
 }
 
-.question h3 em {
+.question h2 em {
   font-style: normal;
   color: var(--accent);
   margin-right: 6px;

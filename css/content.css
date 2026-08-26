@@ -133,6 +133,13 @@
   flex-wrap: wrap;
 }
 
+.section-lead {
+  color: var(--text-sub);
+  max-width: 720px;
+  margin: -12px 0 28px;
+  line-height: 1.7;
+}
+
 /* ---------- 모바일 ---------- */
 @media (max-width: 640px) {
   .card-grid {
