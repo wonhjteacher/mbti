@@ -67,6 +67,15 @@ submitBtn.addEventListener("click", () => {
 
 function showResult(winner, scores) {
   const group = GROUPS[winner];
+
+  // GA4: 테스트 완료 이벤트 — 광고 차단 등으로 gtag가 없어도 결과 표시는 동작해야 한다
+  if (typeof gtag === "function") {
+    gtag("event", "test_complete", {
+      result_group: winner.toUpperCase(),
+      result_name: group.name,
+    });
+  }
+
   document.getElementById("resultName").textContent = group.name;
   document.getElementById("resultDesc").textContent = group.desc;
   document.getElementById("resultLink").href = group.page;
